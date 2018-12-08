@@ -55,6 +55,28 @@ server.post('/api/actions', (req,res) => {
     .catch(err => console.log(err))
  })
 
+ server.delete(`/api/actions/:actionId`, (req,res) => {
+    const {actionId} = req.params
+    actionModelDb.remove(actionId)
+      .then(() => {
+        actionModelDb.get()
+          .then(actions => {
+            res.json(actions)
+        })
+    })
+ })
+
+ server.delete(`/api/projects/:projectId`, (req,res) => {
+    const {projectId} = req.params
+    projectModelDb.remove(projectId)
+      .then(() => {
+        projectModelDb.get()
+          .then(projects => {
+            res.json(projects)
+        })
+    })
+})
+
 server.listen(port, err => {
     if(err) console.log(err)
     console.log(`Server is running on port: ${port}`);
