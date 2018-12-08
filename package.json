@@ -6,8 +6,10 @@
   "author": "rlmclaughlin <rlmclaughlin@yahoo.com>",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "knex": "^0.15.2",
+    "morgan": "^1.9.1",
     "sqlite3": "^4.0.4"
   },
   "devDependencies": {
@@ -15,6 +17,6 @@
   },
   "scripts": {
     "dev": "nodemon server.js",
-    "start":  "node server.js"
+    "start": "node server.js"
   }
 }
