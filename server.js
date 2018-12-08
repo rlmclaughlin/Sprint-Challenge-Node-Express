@@ -77,6 +77,30 @@ server.post('/api/actions', (req,res) => {
     })
 })
 
+server.put(`/api/actions/:actionId`, (req,res) => {
+    const {actionId} = req.params
+    const {project_id, description, notes, completed} = req.body;
+    actionModelDb.update(actionId, {project_id, description, notes, completed})
+      .then(() =>{
+        actionModelDb.get()
+          .then(actions => {
+            res.json(actions)
+        })
+    }) 
+})
+
+ server.put(`/api/projects/:projectId`, (req,res) => {
+    const {projectId} = req.params
+    const {name, description, completed} = req.body
+    projectModelDb.update(projectId, {name, description,completed})
+      .then(() => {
+        projectModelDb.get()
+          .then(projects => {
+            res.json(projects)
+        })
+    })
+})
+
 server.listen(port, err => {
     if(err) console.log(err)
     console.log(`Server is running on port: ${port}`);
