@@ -1,0 +1,58 @@
+.action-container{
+  border: 1px solid black; 
+  margin-bottom: 20px; 
+  width: 800px; 
+  border-radius: 5px; 
+  padding: 10px; 
+  background-color: lightgrey
+}
+
+.projects-container{
+  border: 1px solid black; 
+  margin-bottom: 20px; 
+  width: 800px; 
+  border-radius: 5px; 
+  padding: 10px; 
+  background-color: lightgrey
+}
+
+.project-form{
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+}
+
+.project-submission{
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  justify-content: flex-end;  
+  margin-top: 2px;
+}
+
+
+.actions-submission{
+  width: 100%; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center; 
+  border: 1px solid black; 
+  margin-bottom: 20px; 
+  width: 800px; 
+  padding: 10px; 
+  background-color: lightgrey; 
+}
+
+.app-container{
+  width: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+
+}
+
+.body{
+  background-color: rgb(228, 240, 247)
+}
